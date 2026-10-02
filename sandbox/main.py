@@ -85,6 +85,15 @@ def building_stats():
         case _:
             print("Invalid choice. Please enter [1 - 2]")
         
+def plan_route():
+    while True:
+        print("\n[-------------------------------------------]")
+        print("           [-ROUTE PLANNER-]")
+        for loc in campus_locations:
+            print(f"[{loc.id}] {loc.name} ({loc.category})")
+        current_location = input("What is your current location? ")
+        destination = input("Where would you like to go? ")
+
 
 
 def main_menu():
@@ -109,7 +118,7 @@ def main_menu():
             case '3':
                 building_stats()
             case '4':
-                pass
+                plan_route()
             case '5':
                 print("EXITING SYSTEM...")
                 break
